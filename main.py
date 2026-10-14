@@ -1,22 +1,21 @@
 import argparse
 import json 
-from datetime import datetime
-from schema.py import format_entry
+from schema import create_entry
 
 expense_list = {}
 
 #This function will handle adding a new item to the expense_list
-def add(amount, description)
-    format_entry(amount, description)
-    return entry
-
-    if amount in expenses == float:
-        if description in expenses != str:
-            expense_list.update(expenses)
+def add(amount, description):
+    if amount in expense_list == float:
+        if description in expense_list != str:
+            expense_list.update(expense_list)
         else:
             print("Your entry is invalid")
-    id += 1
-    return expense_list
+
+        create_entry(amount, description)
+        created_obj = create_entry(amount, description)
+        expense_list.update(created_obj)
+        return created_obj
 
 #This will handle updating the expense list
 def update(amount, description):
@@ -35,6 +34,6 @@ def delete(item):
         print(item, "is not on your expense list")
 
 def view_expenses():
-    expense_list.sort()
+    sorted(expense_list)
     print(expense_list)
 
